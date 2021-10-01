@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+
+import "./App.css";
+import Index from "./pages/Index";
+import Movie from "./pages/Movie";
+require("dotenv").config();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h1 className="title">Movie</h1>
+      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Index} />
+          <Route path="/:id" component={Movie} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

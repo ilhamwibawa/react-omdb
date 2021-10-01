@@ -1,0 +1,72 @@
+.searchBar {
+  background: var(--primary);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+}
+
+.searchBarInput {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+.searchBarButton {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.searchBarButton:hover {
+  background: #ccc;
+}
+
+.searchBarArea {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.suggestion {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+.suggestionItem {
+  list-style: none;
+  padding: 5px;
+  display: flex;
+  grid-gap: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  width: 100%;
+}
+
+.suggestionItem:hover {
+  background: #ddd;
+}
+
+.suggestionImage img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.suggestionMeta {
+  font-size: 12px;
+}
